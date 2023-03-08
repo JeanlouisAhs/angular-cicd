@@ -22,4 +22,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag jeanlouisahs/angular-cicd:$(date +%s)
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USER}}/jeanlouisahs/angular-cicd
+      run: docker push ${{secrets.DOCKER_USER}}/angular-cicd
