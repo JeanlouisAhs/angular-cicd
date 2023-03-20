@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: angular-cicd-deploy
+spec:
+  selector:
+    app: angular-cicd
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80
+  type: NodePort

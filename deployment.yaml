@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: angular-cicd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: angular-cicd
+  template:
+    metadata:
+      labels:
+        app: angular-cicd
+    spec:
+      containers:
+        - name: angular-cicd
+          image: jeanlouisahs/angularcicd
+          ports:
+            - containerPort: 80
