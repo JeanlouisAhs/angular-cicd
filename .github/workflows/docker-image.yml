@@ -26,7 +26,7 @@ jobs:
           tags: jeanlouisahs/angularcicd:latest
       - name: Deploy to Minikube
         run: |
-          minikube start --vm-driver=none
+          minikube start --vm-driver=docker
           kubectl apply -f kubernetes/deployment.yaml
           kubectl apply -f kubernetes/service.yaml
 
