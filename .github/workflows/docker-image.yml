@@ -27,6 +27,6 @@ jobs:
       - name: Deploy to Minikube
         run: |
           minikube start --vm-driver=docker
-          kubectl apply -f kubernetes/deployment.yaml
-          kubectl apply -f kubernetes/service.yaml
+          kubectl apply -f $GITHUB_WORKSPACE/deployment.yaml
+          kubectl apply -f $GITHUB_WORKSPACE/service.yaml
 
